@@ -1,10 +1,6 @@
 # OverTheWire Writeup / 闖關筆記
 
 > 我的 [OverTheWire](https://overthewire.org/wargames/) 學習紀錄。
-> My personal writeups for the OverTheWire wargames — used as a public study journal.
-
-中英並陳：中文寫過程與思考，英文保留指令、輸出與專有名詞。
-Bilingual: Chinese narrative + English commands / outputs / jargon.
 
 ---
 
