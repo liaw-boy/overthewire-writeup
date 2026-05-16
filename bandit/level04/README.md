@@ -87,6 +87,6 @@ bandit4@bandit:~$
 
 <div align="center">
 
-**◀ [Level 2 → 3：含空白的檔名](../level03/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ _待寫_**
+**◀ [Level 2 → 3：含空白的檔名](../level03/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ [Level 4 → 5：找 human-readable 檔](../level05/)**
 
 </div>

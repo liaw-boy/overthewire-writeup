@@ -28,8 +28,8 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 | 1 → 2 | 特殊檔名 `-` | `cat ./-` | [→ level02](./level02/) |
 | 2 → 3 | 含空白的檔名 | quoting, `\` escape | [→ level03](./level03/) |
 | 3 → 4 | 隱藏檔 | `ls -a` | [→ level04](./level04/) |
-| 4 → 5 | 找 human-readable 檔 | `file`, `find` | _coming_ |
-| 5 → 6 | 條件式 find（size, executable） | `find -size -executable` | _coming_ |
+| 4 → 5 | 找 human-readable 檔 | `file`, `find` | [→ level05](./level05/) |
+| 5 → 6 | 條件式 find（size, executable） | `find -size -executable` | [→ level06](./level06/) |
 | 6 → 7 | 全系統搜尋（user / group） | `find / -user -group` | _coming_ |
 | 7 → 8 | grep 字串 | `grep` | _coming_ |
 | 8 → 9 | 找唯一行 | `sort`, `uniq -u` | _coming_ |
