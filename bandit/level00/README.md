@@ -50,7 +50,7 @@ bandit0@bandit.labs.overthewire.org's password: bandit0
 bandit0@bandit:~$
 ```
 
-看到 `bandit0@bandit:~$` 提示符代表登入成功，第一關完成 ✅
+看到 `bandit0@bandit:~$` prompt 代表登入成功，第一關完成 ✅
 
 ## 密碼
 
@@ -59,7 +59,7 @@ bandit0@bandit:~$
 
 Level 0 的密碼**題目已經告訴你**：`bandit0`。
 
-下一關（`bandit1`）的密碼要登入後從 home directory 的 `readme` 取得，留到下一篇紀錄。
+下一關（`bandit1`）的密碼要登入後從 home 目錄的 `readme` 取得，留到下一篇紀錄。
 
 </details>
 
@@ -86,7 +86,7 @@ Level 0 的密碼**題目已經告訴你**：`bandit0`。
 
 <div align="right">
 
-**下一關 ▶ [Level 0 → 1：讀取家目錄的檔案](../level01/)**
+**下一關 ▶ [Level 0 → 1：讀取 home 目錄的檔案](../level01/)**
 
 </div>
 

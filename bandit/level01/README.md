@@ -1,4 +1,4 @@
-# Bandit Level 0 → Level 1 — 讀取家目錄的檔案
+# Bandit Level 0 → Level 1 — 讀取 home 目錄的檔案
 
 > 第一次真正解題。重點是熟悉 `ls` 看目錄、`cat` 讀檔，並且**先看清楚再動手**。
 > First real puzzle. Goal: get comfortable with `ls` and `cat`, and learn to *look before you leap*.
@@ -13,15 +13,15 @@
 
 ### 中文翻譯
 
-下一關（`bandit1`）的密碼存在 **home directory 裡一個叫 `readme` 的檔案**。
+下一關（`bandit1`）的密碼存在 **home 目錄裡一個叫 `readme` 的檔案**。
 拿到後，用 SSH（port `2220`）登入 `bandit1`，繼續闖下去。
 
 > 💡 之後每一關的玩法都是：「在這關找到下一關的密碼 → SSH 登入下一關」。
 
 ## 🧠 預備知識 / Prerequisites
 
-- **Home directory (`~`)**：使用者登入後預設所在的目錄，路徑是 `/home/<username>`，本關裡就是 `/home/bandit0`。
-- **`$HOME` 環境變數**：等同於家目錄路徑，跨 shell 通用。
+- **home 目錄 (`~`)**：使用者登入後預設所在的目錄，路徑是 `/home/<username>`，本關裡就是 `/home/bandit0`。
+- **`$HOME` 環境變數**：等同於 home 目錄路徑，跨 shell 通用。
 - **絕對路徑 vs 相對路徑**：`/home/bandit0/readme` 是絕對路徑；`readme` 是相對於目前目錄。
 - **`pwd`** 隨時可以確認自己在哪裡。
 
