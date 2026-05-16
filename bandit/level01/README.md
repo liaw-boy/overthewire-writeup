@@ -65,11 +65,11 @@ bandit1@bandit:~$
 <details>
 <summary>展開（請先自己嘗試）</summary>
 
-OverTheWire 會不定期重置密碼，這裡不放固定值。請自己 `cat readme` 後把結果填到下面這個 code block 當作個人備忘：
-
 ```text
-<把你拿到的 32 字元密碼貼這裡>
+ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 ```
+
+> ⚠️ OverTheWire 會不定期重置密碼，這個值是我打通關當下的快照，若失效請自己重新 `cat readme` 取得。
 
 </details>
 
