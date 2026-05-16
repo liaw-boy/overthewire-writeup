@@ -65,8 +65,6 @@ bandit2@bandit:~$
 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 ```
 
-> ⚠️ OverTheWire 會不定期重置密碼，這個值是我打通關當下的快照，若失效請自己重新解一次取得。
-
 </details>
 
 ## 指令介紹
