@@ -90,6 +90,6 @@ ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 
 <div align="center">
 
-**◀ [Level 0：SSH 登入](../level00/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ _待寫_**
+**◀ [Level 0：SSH 登入](../level00/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ [Level 1 → 2：特殊檔名 `-`](../level02/)**
 
 </div>
