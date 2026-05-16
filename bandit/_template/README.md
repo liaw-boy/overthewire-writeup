@@ -62,8 +62,10 @@ output
 
 ---
 
+<!-- 套用模板時把下方 placeholder 換成實際連結，例如：[Level 0：SSH 登入](../level00/) -->
+
 <div align="center">
 
-**◀ [上一關](../levelXX/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ [Level X+1](../levelXX/)**
+**◀ 上一關 _placeholder_** · [🏠 回 Bandit 索引](../) · **下一關 _placeholder_ ▶**
 
 </div>
