@@ -82,6 +82,6 @@ bandit2@bandit:~$
 
 <div align="center">
 
-**◀ [Level 0 → 1：讀取 home 目錄的檔案](../level01/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ _待寫_**
+**◀ [Level 0 → 1：讀取 home 目錄的檔案](../level01/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ [Level 2 → 3：含空白的檔名](../level03/)**
 
 </div>
