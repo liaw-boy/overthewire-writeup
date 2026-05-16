@@ -95,6 +95,6 @@ MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 
 <div align="center">
 
-**◀ [Level 1 → 2：特殊檔名 `-`](../level02/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ _待寫_**
+**◀ [Level 1 → 2：特殊檔名 `-`](../level02/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ [Level 3 → 4：隱藏檔](../level04/)**
 
 </div>

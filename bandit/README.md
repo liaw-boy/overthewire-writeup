@@ -27,7 +27,7 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 | 0 → 1 | 讀取 home 目錄檔案 | `ls`, `cat` | [→ level01](./level01/) |
 | 1 → 2 | 特殊檔名 `-` | `cat ./-` | [→ level02](./level02/) |
 | 2 → 3 | 含空白的檔名 | quoting, `\` escape | [→ level03](./level03/) |
-| 3 → 4 | 隱藏檔 | `ls -a` | _coming_ |
+| 3 → 4 | 隱藏檔 | `ls -a` | [→ level04](./level04/) |
 | 4 → 5 | 找 human-readable 檔 | `file`, `find` | _coming_ |
 | 5 → 6 | 條件式 find（size, executable） | `find -size -executable` | _coming_ |
 | 6 → 7 | 全系統搜尋（user / group） | `find / -user -group` | _coming_ |
