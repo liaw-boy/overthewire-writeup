@@ -109,6 +109,6 @@ HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 <div align="center">
 
-**◀ [Level 4 → 5：找 human-readable 檔](../level05/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ _待寫_**
+**◀ [Level 4 → 5：找 human-readable 檔](../level05/)** · [🏠 回 Bandit 索引](../) · **下一關 ▶ [Level 6 → 7：全機 find（owner/group/size）](../level07/)**
 
 </div>

@@ -30,7 +30,7 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 | 3 → 4 | 隱藏檔 | `ls -a` | [→ level04](./level04/) |
 | 4 → 5 | 找 human-readable 檔 | `file`, `find` | [→ level05](./level05/) |
 | 5 → 6 | 條件式 find（size, executable） | `find -size -executable` | [→ level06](./level06/) |
-| 6 → 7 | 全系統搜尋（user / group） | `find / -user -group` | _coming_ |
+| 6 → 7 | 全系統搜尋（user / group） | `find / -user -group` | [→ level07](./level07/) |
 | 7 → 8 | grep 字串 | `grep` | _coming_ |
 | 8 → 9 | 找唯一行 | `sort`, `uniq -u` | _coming_ |
 | 9 → 10 | 二進位中找字串 | `strings`, `grep` | _coming_ |
