@@ -19,7 +19,7 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 
 每一關都是登入該關卡的帳號，在伺服器上想辦法找出下一關的密碼。取得 `banditN+1` 的密碼後，用該密碼 SSH 登入 `banditN+1`，依此類推。
 
-## 📋 關卡進度（對齊官方 35 關）
+## 📋 關卡進度（對應官方 35 關）
 
 | Level | 主題 | 重點指令 | Writeup |
 |-------|------|----------|---------|
@@ -65,6 +65,6 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 
 每一關的密碼都用 `<details>` 摺疊。請先自己試，真的卡住或要驗證再展開。
 
-## 🧰 Template
+## 🧰 範本
 
-新關卡 writeup 模板放在 [`_template/`](./_template/)，方便快速複製。
+新關卡 writeup 範本放在 [`_template/`](./_template/)，方便快速複製。

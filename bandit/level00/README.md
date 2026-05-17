@@ -92,6 +92,6 @@ Level 0 的密碼**題目已經告訴你**：`bandit0`。
 
 <div align="center">
 
-[🏠 回 Bandit 索引](../) · [📋 全站首頁](../../)
+[🏠 回 Bandit 索引](../README.md) · [📋 全站首頁](../../README.md)
 
 </div>

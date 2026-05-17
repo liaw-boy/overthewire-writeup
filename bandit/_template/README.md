@@ -62,7 +62,7 @@ output
 
 ---
 
-<!-- 套用模板時把下方 placeholder 換成實際連結，例如：[Level 0：SSH 登入](../level00/) -->
+<!-- 套用範本時把下方 placeholder 換成實際連結，例如：[Level 0：SSH 登入](../level00/) -->
 
 <div align="center">
 

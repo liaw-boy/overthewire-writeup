@@ -42,7 +42,7 @@ bandit3@bandit:~/inhere$ cat ...Hiding-From-You
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
 
-> 保險寫法：`cat ./...Hiding-From-You`，明確告訴 shell「這是當前目錄的檔名」，避免被誤判（**對齊 Level 1→2 的抓手**）。
+> 保險寫法：`cat ./...Hiding-From-You`，明確告訴 shell「這是當前目錄的檔名」，避免被誤判（**跟 Level 1→2 的處理方式一樣**）。
 
 拿到密碼後登入下一關：
 
