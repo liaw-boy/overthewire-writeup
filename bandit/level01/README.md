@@ -20,7 +20,7 @@
 
 這關沒有 trick — 純粹練 `ls` 看目錄、`cat` 讀檔。
 
-真正的學習重點是養成**先 `ls -la` 看清楚權限與檔案，再動手**的習慣。
+真正的學習重點是養成**先 `ls -al` 看清楚權限與檔案，再動手**的習慣。
 
 ## 解題過程
 
@@ -28,7 +28,7 @@
 bandit0@bandit:~$ pwd
 /home/bandit0
 
-bandit0@bandit:~$ ls -la
+bandit0@bandit:~$ ls -al
 total 24
 drwxr-xr-x  3 root    root    4096 ... .
 drwxr-xr-x 70 root    root    4096 ... ..
@@ -79,7 +79,7 @@ ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 | `ls` | 列出目錄內容 |
 | `ls -l` | 詳細列出（權限、owner、size、時間）|
 | `ls -a` | 連 `.` 開頭的隱藏檔一起列 |
-| `ls -la` | 上兩者組合，最常用 |
+| `ls -al` | 上兩者組合，最常用 |
 | `cat <file>` | 把檔案內容印到 stdout |
 | `~` / `$HOME` | 目前使用者的 home 目錄路徑 |
 | `exit` 或 `Ctrl+D` | 離開目前的 shell |

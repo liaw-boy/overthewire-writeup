@@ -22,7 +22,7 @@
 ## 解題過程
 
 ```text
-bandit4@bandit:~$ ls -la
+bandit4@bandit:~$ ls -al
 total 12
 drwxr-xr-x  3 root    root    4096 ... .
 drwxr-xr-x 70 root    root   4096 ... ..
@@ -30,7 +30,7 @@ drwxr-xr-x  2 root    root    4096 ... inhere
 
 bandit4@bandit:~$ cd inhere/
 
-bandit4@bandit:~/inhere$ ls -la
+bandit4@bandit:~/inhere$ ls -al
 total 48
 drwxr-xr-x 2 root    root    4096 ... .
 drwxr-xr-x 3 root    root    4096 ... ..

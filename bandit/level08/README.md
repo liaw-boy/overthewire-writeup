@@ -30,7 +30,7 @@ ssh bandit7@bandit.labs.overthewire.org -p 2220
 先看看 home 目錄有什麼：
 
 ```bash
-bandit7@bandit:~$ ls -la
+bandit7@bandit:~$ ls -al
 -rw-r----- 1 bandit8 bandit7 4.0K ... data.txt
 ```
 

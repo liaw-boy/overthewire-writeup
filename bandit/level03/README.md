@@ -27,7 +27,7 @@ cat spaces in this filename
 ## 解題過程
 
 ```text
-bandit2@bandit:~$ ls -la
+bandit2@bandit:~$ ls -al
 total 24
 drwxr-xr-x  2 root    root    4096 ... .
 drwxr-xr-x 70 root    root    4096 ... ..

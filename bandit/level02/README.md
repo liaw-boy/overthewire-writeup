@@ -21,7 +21,7 @@
 ## 解題過程
 
 ```text
-bandit1@bandit:~$ ls -la
+bandit1@bandit:~$ ls -al
 total 24
 drwxr-xr-x  2 root    root    4096 ... .
 drwxr-xr-x 70 root    root    4096 ... ..

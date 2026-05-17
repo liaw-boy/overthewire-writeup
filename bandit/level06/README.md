@@ -28,14 +28,22 @@
 ## 解題過程
 
 ```text
-bandit5@bandit:~$ ls
-inhere
+bandit5@bandit:~$ ls -al
+total 12
+drwxr-xr-x  3 root    root    4096 ... .
+drwxr-xr-x 70 root    root   4096 ... ..
+drwxr-xr-x 22 root    root    4096 ... inhere
 
 bandit5@bandit:~$ cd inhere/
 
-bandit5@bandit:~/inhere$ ls
-maybehere00  maybehere02  maybehere04  maybehere06  maybehere08  maybehere10  maybehere12  maybehere14  maybehere16  maybehere18
-maybehere01  maybehere03  maybehere05  maybehere07  maybehere09  maybehere11  maybehere13  maybehere15  maybehere17  maybehere19
+bandit5@bandit:~/inhere$ ls -al
+total 88
+drwxr-xr-x 22 root root 4096 ... .
+drwxr-xr-x  3 root root 4096 ... ..
+drwxr-xr-x  2 root root 4096 ... maybehere00
+drwxr-xr-x  2 root root 4096 ... maybehere01
+...（共 maybehere00 ~ maybehere19 二十個目錄）...
+drwxr-xr-x  2 root root 4096 ... maybehere19
 
 bandit5@bandit:~/inhere$ find . -type f -size 1033c ! -executable
 ./maybehere07/.file2
