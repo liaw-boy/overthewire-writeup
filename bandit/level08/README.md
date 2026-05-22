@@ -38,7 +38,7 @@ bandit7@bandit:~$ ls -al
 
 ```bash
 bandit7@bandit:~$ grep millionth data.txt
-millionth	dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+millionth	4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 ```
 
 只有一行命中，tab 之後那一串就是 `bandit8` 的密碼。
@@ -55,7 +55,7 @@ ssh bandit8@bandit.labs.overthewire.org -p 2220
 <summary>展開（先自己試過再看）</summary>
 
 ```
-dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 ```
 
 </details>
@@ -94,14 +94,14 @@ grep [選項] PATTERN FILE
 
 ```bash
 grep millionth data.txt | cut -f2
-# dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+# 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 ```
 
 用 `awk` 一步搞定（不用 pipe）：
 
 ```bash
 awk '/millionth/ {print $2}' data.txt
-# dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+# 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 ```
 
 ### 為什麼不用 `cat data.txt | grep millionth`
@@ -125,6 +125,6 @@ grep millionth data.txt
 
 <div align="center">
 
-**◀ [Level 6 → 7：全機 find（owner/group/size）](../level07/)** · [🏠 回 Bandit 索引](../README.md) · **下一關 ▶ _待寫_**
+**◀ [Level 6 → 7：全機 find（owner/group/size）](../level07/)** · [🏠 回 Bandit 索引](../README.md) · **[Level 8 → 9：sort + uniq 找唯一行](../level09/) ▶**
 
 </div>
