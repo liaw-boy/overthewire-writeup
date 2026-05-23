@@ -1,6 +1,6 @@
-# Bandit Level 10 → 11 — base64 解碼
+# Bandit Level 11 → 12 — ROT13 凱撒密碼
 
-> 密碼被 base64 編碼存起來，`base64 -d` 一行還原，認識這個網路上最常見的編碼格式。
+> 字母換了位置就不算加密——ROT13 是最入門的「移位密碼」，`tr` 一行搞定。
 
 ---
 
@@ -8,63 +8,150 @@
 
 官方原文：
 
-> The password for the next level is stored in the file `data.txt`, which contains base64 encoded data.
+> The password for the next level is stored in the file `data.txt`, where all lowercase (a-z) and all uppercase (A-Z) letters have been rotated by 13 positions.
 
-也就是說 — `data.txt` 裡的內容不是明文，是經過 base64 編碼的字串，需要解碼才能讀到密碼。
+---
 
-## 挑戰點
-
-1. **base64 不是加密** — 看起來像亂碼，但沒有金鑰，任何人都能解；常被誤以為有安全性。
-2. **結尾的 `=` 是 padding** — base64 以 3 bytes 為單位編碼，不足時補 `=`，是正常現象。
-
-## 用到的指令
-
-| 指令 | 用途 |
-|------|------|
-| `base64 -d` | 把 base64 字串解碼回原始內容 |
-| `base64` | 把檔案或標準輸入編碼成 base64 |
-
-### base64 重點
+## 先登入，看看檔案長什麼樣
 
 ```bash
-base64 -d FILE          # 解碼檔案
-base64 FILE             # 編碼檔案（輸出到 stdout）
-echo "hello" | base64   # 編碼字串 → aGVsbG8K
-echo "aGVsbG8K" | base64 -d   # 解碼 → hello
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+# password: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 ```
 
-> **base64 字符集**：A-Z、a-z、0-9、`+`、`/`，結尾補 `=` 對齊。看到只含這些字元的長字串，基本上就是 base64。
-
-## 解題步驟
-
-登入：
+登入後，先讀一下 `data.txt`：
 
 ```bash
-ssh bandit10@bandit.labs.overthewire.org -p 2220
-# password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+cat data.txt
 ```
 
-看一下 `data.txt`：
+你會看到類似這樣的輸出：
+
+```
+Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+```
+
+---
+
+## 停一下，先觀察
+
+**問自己**：這串文字有什麼特徵？
+
+- 它有空格，有大小寫字母，結構上看起來像一個英文句子。
+- 但意思完全不通——`Gur`、`cnffjbeq` 是什麼字？
+- 數字和符號（`7k16J...`）看起來沒有被動過。
+
+這個特徵給你什麼提示？
+
+<details>
+<summary>想想看，再展開</summary>
+
+> 「只有字母被動過，數字和空格沒有」——這是移位密碼的典型行為。
+> 題目說「rotated by 13 positions」，這個操作叫 **ROT13**。
+
+</details>
+
+---
+
+## ROT13 是什麼？
+
+字母表有 26 個字母。ROT13 就是把每個字母往後移 13 格：
+
+```
+A → N
+B → O
+C → P
+...
+M → Z
+N → A   ← 到 Z 之後，從 A 繞回來
+...
+Z → M
+```
+
+**問自己**：如果 A 移 13 格變成 N，那 N 移 13 格會變成什麼？
+
+<details>
+<summary>算一下再展開</summary>
+
+> N 再移 13 格 = N + 13 = 第 27 格 = 繞回第 1 格 = **A**。
+>
+> 所以 ROT13 **加密和解密是同一個操作**——對同一串文字做兩次 ROT13，會回到原文。
+
+</details>
+
+---
+
+## 用什麼工具還原？
+
+Linux 有個指令叫 `tr`（transliterate），可以做逐字元替換。
+
+先試試看一個簡單的例子——把所有大寫轉小寫：
 
 ```bash
-bandit10@bandit:~$ cat data.txt
-VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==
+echo "HELLO" | tr 'A-Z' 'a-z'
 ```
 
-典型的 base64：只有英數字 + `=` 結尾。直接解碼：
+輸出：`hello`
+
+`tr 'SET1' 'SET2'` 的邏輯是：**SET1 裡的第 N 個字元，換成 SET2 裡的第 N 個字元**。
+
+---
+
+## 動手設計 ROT13 的對應表
+
+ROT13 的大寫對應是：
+
+```
+原始： A B C D E F G H I J K L M  N O P Q R S T U V W X Y Z
+替換： N O P Q R S T U V W X Y Z  A B C D E F G H I J K L M
+```
+
+用 `tr` 的範圍語法來表達：
+
+- 原始：`A-Z`（A 到 Z）
+- 替換：`N-ZA-M`（N 到 Z，然後接 A 到 M）
+
+**問自己**：小寫的部分要怎麼寫？
+
+<details>
+<summary>試著自己填，再展開</summary>
+
+```
+原始小寫： a-z
+替換小寫： n-za-m
+```
+
+所以完整的 `tr` 指令是：
 
 ```bash
-bandit10@bandit:~$ base64 -d data.txt
-The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 
-`dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr` 就是 bandit11 的密碼。
+</details>
+
+---
+
+## 執行解密
+
+把 `cat data.txt` 的輸出接進 `tr`：
+
+```bash
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+
+你應該看到：
+
+```
+The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+```
 
 驗證登入：
 
 ```bash
-ssh bandit11@bandit.labs.overthewire.org -p 2220
+ssh bandit12@bandit.labs.overthewire.org -p 2220
 ```
+
+---
 
 ## 密碼
 
@@ -72,46 +159,37 @@ ssh bandit11@bandit.labs.overthewire.org -p 2220
 <summary>展開（先自己試過再看）</summary>
 
 ```
-dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 ```
 
 </details>
 
-## base64 是什麼？
+---
 
-base64 把每 3 個 bytes（24 bits）轉成 4 個可印字元（每個 6 bits）：
+## 這關學到什麼？
 
-```
-原始：      M       a       n
-ASCII：    77      97     110
-二進位：  01001101 01100001 01101110
-重新分組： 010011  010110  000101  101110
-十進位：    19      22       5      46
-base64：    T       W       F      u
-```
+| 概念 | 要點 |
+|------|------|
+| ROT13 | 字母移 13 位，加解密同一操作，不是真正的加密 |
+| `tr 'SET1' 'SET2'` | 逐字元替換，支援範圍語法 `A-Z` |
+| 範圍拼接 | `N-ZA-M` = N 到 Z 再接 A 到 M，處理繞回的問題 |
+| pipe `\|` | 把一個指令的輸出接到下一個指令的輸入 |
 
-結果 `Man` → `TWFu`，長度膨脹 4/3 倍。
+**延伸練習**：
 
-**常見用途**：
-- HTTP Basic Auth 的帳密傳輸
-- Email 附件（MIME encoding）
-- JWT 的 header 和 payload
-- 在 JSON / XML 裡嵌入二進位資料（圖片、檔案）
+1. 試著把 `The password is ...` 再 ROT13 一次，應該會回到 `Gur cnffjbeq vf ...`
+2. 試試 `echo "Hello World" | tr 'A-Za-z' 'N-ZA-Mn-za-m'`，觀察空格和大小寫的行為
 
-**不是加密**：base64 是 encoding（編碼），目的是「讓 binary 能在文字通道傳輸」，不提供任何機密性。
+---
 
-## 一句話記法
+## 延伸閱讀
 
-> 「**`base64 -d` 解碼，`base64` 編碼**」——`-d` 是 decode，沒有 `-d` 就是 encode。
-
-## 延伸閱讀（官方建議）
-
-- `man base64`
+- `man tr`
 
 ---
 
 <div align="center">
 
-**◀ [Level 9 → 10：strings 從 binary 撈密碼](../level10/)** · [🏠 回 Bandit 索引](../README.md) · **下一關 Level 11 → 12 ▶ _待寫_**
+**◀ [Level 10 → 11：base64 解碼](../level10/)** · [🏠 回 Bandit 索引](../README.md) · **下一關 Level 12 → 13 ▶ _待寫_**
 
 </div>
