@@ -15,8 +15,8 @@
 
 | Game | 描述 / Description | 進度 / Progress | 連結 |
 |------|--------------------|------------------|------|
-| Bandit | Linux & shell 基礎，最適合入門 | 🚧 進行中 / In progress | [→ bandit/](./bandit/) |
-| Natas | Web security (client/server) | ⏳ 尚未開始 / Not started | — |
+| Bandit | Linux & shell 基礎，最適合入門 | ✅ 完成 Level 0–33 | [→ bandit/](./bandit/) |
+| Natas | Web security (client/server) | 🚧 進行中 Level 0–5 | [→ natas/](./natas/) |
 | Leviathan | 二進位逆向入門 | ⏳ Not started | — |
 | Krypton | 古典密碼學 | ⏳ Not started | — |
 | Narnia | 經典 stack overflow / exploit 入門 | ⏳ Not started | — |
