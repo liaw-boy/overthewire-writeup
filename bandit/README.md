@@ -32,32 +32,32 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 | 5 → 6 | 條件式 find（size, executable） | `find -size -executable` | [→ level06](./level06/) |
 | 6 → 7 | 全系統搜尋（user / group） | `find / -user -group` | [→ level07](./level07/) |
 | 7 → 8 | grep 字串 | `grep` | [→ level08](./level08/) |
-| 8 → 9 | 找唯一行 | `sort`, `uniq -u` | _coming_ |
-| 9 → 10 | 二進位中找字串 | `strings`, `grep` | _coming_ |
-| 10 → 11 | base64 解碼 | `base64 -d` | _coming_ |
-| 11 → 12 | ROT13 | `tr` | _coming_ |
-| 12 → 13 | 多重壓縮 hexdump | `xxd -r`, `file`, `gzip`, `bzip2`, `tar` | _coming_ |
-| 13 → 14 | SSH 私鑰登入 | `ssh -i` | _coming_ |
-| 14 → 15 | netcat 連 localhost port | `nc localhost 30000` | _coming_ |
-| 15 → 16 | openssl s_client（SSL）| `openssl s_client` | _coming_ |
-| 16 → 17 | nmap + openssl | `nmap`, `openssl s_client` | _coming_ |
-| 17 → 18 | diff 比對兩檔 | `diff` | _coming_ |
-| 18 → 19 | SSH 帶遠端指令 | `ssh ... 'cmd'` | _coming_ |
-| 19 → 20 | setuid binary | `./bandit20-do` | _coming_ |
-| 20 → 21 | nc listener + setuid | `nc -l`, `suconnect` | _coming_ |
-| 21 → 22 | cron 任務分析 | `/etc/cron.d/`, `cat` | _coming_ |
-| 22 → 23 | cron + md5sum | `md5sum`, `mktemp` | _coming_ |
-| 23 → 24 | 可寫 cron 目錄 | scripting cron job | _coming_ |
-| 24 → 25 | brute force pincode + nc | shell loop, `nc` | _coming_ |
-| 25 → 26 | `more` / vi 逃逸 | `more`, `vim` | _coming_ |
-| 26 → 27 | vim shell + setuid | `:!`, `:e` | _coming_ |
-| 27 → 28 | git clone over SSH | `git clone` | _coming_ |
-| 28 → 29 | git log 找歷史 | `git log -p` | _coming_ |
-| 29 → 30 | git branches | `git branch -r` | _coming_ |
-| 30 → 31 | git tags | `git tag` | _coming_ |
-| 31 → 32 | git push | `git push` | _coming_ |
-| 32 → 33 | shell escape `$0` | `$0` | _coming_ |
-| 33 → 34 | 結束頁 | — | _coming_ |
+| 8 → 9 | 找唯一行 | `sort`, `uniq -u` | [→ level09](./level09/) |
+| 9 → 10 | 二進位中找字串 | `strings`, `grep` | [→ level10](./level10/) |
+| 10 → 11 | base64 解碼 | `base64 -d` | [→ level11](./level11/) |
+| 11 → 12 | ROT13 | `tr` | [→ level12](./level12/) |
+| 12 → 13 | 多重壓縮 hexdump | `xxd -r`, `file`, `gzip`, `bzip2`, `tar` | [→ level13](./level13/) |
+| 13 → 14 | SSH 私鑰登入 | `ssh -i` | [→ level14](./level14/) |
+| 14 → 15 | netcat 連 localhost port | `nc localhost 30000` | [→ level15](./level15/) |
+| 15 → 16 | openssl s_client（SSL）| `openssl s_client` | [→ level16](./level16/) |
+| 16 → 17 | nmap + openssl | `nmap`, `openssl s_client` | [→ level17](./level17/) |
+| 17 → 18 | diff 比對兩檔 | `diff` | [→ level18](./level18/) |
+| 18 → 19 | SSH 帶遠端指令 | `ssh ... 'cmd'` | [→ level19](./level19/) |
+| 19 → 20 | setuid binary | `./bandit20-do` | [→ level20](./level20/) |
+| 20 → 21 | nc listener + setuid | `nc -l`, `suconnect` | [→ level21](./level21/) |
+| 21 → 22 | cron 任務分析 | `/etc/cron.d/`, `cat` | [→ level22](./level22/) |
+| 22 → 23 | cron + md5sum | `md5sum`, `mktemp` | [→ level23](./level23/) |
+| 23 → 24 | 可寫 cron 目錄 | scripting cron job | [→ level24](./level24/) |
+| 24 → 25 | brute force pincode + nc | shell loop, `nc` | [→ level25](./level25/) |
+| 25 → 26 | `more` / vi 逃逸 | `more`, `vim` | [→ level26](./level26/) |
+| 26 → 27 | vim shell + setuid | `:set shell`, `:shell` | [→ level27](./level27/) |
+| 27 → 28 | git clone over SSH | `git clone` | [→ level28](./level28/) |
+| 28 → 29 | git log 找歷史 | `git log`, `git show` | [→ level29](./level29/) |
+| 29 → 30 | git branches | `git branch -a`, `git checkout` | [→ level30](./level30/) |
+| 30 → 31 | git tags | `git tag`, `git show` | [→ level31](./level31/) |
+| 31 → 32 | git push + .gitignore 繞過 | `git add -f`, `git push` | [→ level32](./level32/) |
+| 32 → 33 | shell escape `$0` | `$0` | [→ level33](./level33/) |
+| 33 | 完成！ | — | [→ level34](./level34/) |
 
 > Writeup 會隨闖關進度持續更新。
 
