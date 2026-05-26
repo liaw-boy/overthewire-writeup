@@ -115,6 +115,6 @@ gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
 
 <div align="center">
 
-**◀ [Level 22 → 23：cron + md5](../level22/)** · [🏠 回 Bandit 索引](../README.md) · **下一關 Level 24 → 25 ▶ _待寫_**
+**◀ [Level 22 → 23：cron + md5](../level22/)** · [🏠 回 Bandit 索引](../README.md) · **[Level 24 → 25：暴力破解 PIN ▶](../level24/)**
 
 </div>

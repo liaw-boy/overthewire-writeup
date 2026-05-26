@@ -190,6 +190,6 @@ ssh bandit12@bandit.labs.overthewire.org -p 2220
 
 <div align="center">
 
-**◀ [Level 10 → 11：base64 解碼](../level10/)** · [🏠 回 Bandit 索引](../README.md) · **下一關 Level 12 → 13 ▶ _待寫_**
+**◀ [Level 10 → 11：base64 解碼](../level10/)** · [🏠 回 Bandit 索引](../README.md) · \*\*[Level 12 → 13：多重壓縮 hexdump ▶](../level12/)\*\*
 
 </div>

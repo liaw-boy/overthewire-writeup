@@ -89,6 +89,6 @@ r w s  r - x  - - -
 
 <div align="center">
 
-**◀ [Level 18 → 19：繞過 bashrc](../level18/)** · [🏠 回 Bandit 索引](../README.md) · **下一關 Level 20 → 21 ▶ _待寫_**
+**◀ [Level 18 → 19：繞過 bashrc](../level18/)** · [🏠 回 Bandit 索引](../README.md) · **[Level 20 → 21：nc listener + setuid ▶](../level20/)**
 
 </div>
